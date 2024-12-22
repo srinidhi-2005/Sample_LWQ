@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import FileUpload from './components/FileUpload/FileUpload';
-import Input from './components/Input/Input';
-import Results from './components/Results/Results';
-import "./App.css";
+import { GiDroplets } from "react-icons/gi";
+import FileUpload from './components/FileUpload';
+import Input from './components/Input';
+import Results from './components/Results';
 
 function App() {
   const [lakeName, setLakeName] = useState("");
@@ -38,10 +38,28 @@ function App() {
   };
 
   return (
-    <div className="app">
-      <h1>Lake - Water Quality Analysis</h1>
-      <p>Upload satellite images to analyze water quality parameters</p>
-      <form className="form" onSubmit={handleSubmit}>
+    <div
+      style={{
+        textAlign: "center",
+        padding: "100px",
+        fontFamily: "'Roboto', sans-serif",
+        backgroundColor: "white",
+      }}
+    >
+      <h1 style={{ color: "#1158dc", fontSize: "35px", display: "flex", alignItems: "center", justifyContent: "center", gap: "10px" }}>
+        Lake - Water Quality Analysis <GiDroplets />
+      </h1>
+      <p style={{ marginTop: "20px", color: "brown", fontSize: "15px" }}>
+        Upload satellite images to analyze water quality parameters
+      </p>
+      <form
+        onSubmit={handleSubmit}
+        style={{
+          margin: "50px auto",
+          width: "700px",
+          height: "300px",
+        }}
+      >
         <FileUpload
           onFileChange={handleFileChange}
           selectedFile={selectedFile}
