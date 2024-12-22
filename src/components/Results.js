@@ -1,107 +1,36 @@
 import React from "react";
 
-const Results = ({ result }) => {
+const Results = ({ result, darkMode }) => {
   if (!result) return null;
 
   return (
-    <div
-      style={{
-        fontSize: "35px",
-        marginTop: "22px",
-        marginBottom: "50px",
-        padding: "16px",
-        width: "740px",
-        border: "1px solid #ccc",
-        borderRadius: "7px",
-        backgroundColor: "whitesmoke",
-        color: "#2c662d",
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "flex-start",
-        minHeight: "250px",
-      }}
-    >
+    <div className={`flex flex-col items-center justify-start w-full max-w-[740px] min-h-[250px] mt-6 mb-12 p-4 text-[35px] rounded-lg ${
+      darkMode ? 'bg-gray-800 border-gray-700' : 'bg-gray-100 border-gray-300'
+    } border`}>
       <button
-        style={{
-          fontSize: "18px",
-          fontWeight: "bold",
-          padding: "10px 20px",
-          backgroundColor: "#46e243",
-          color: "#000000",
-          border: "none",
-          borderRadius: "8px",
-          cursor: "pointer",
-          transition: "background-color 0.3s ease, transform 0.2s ease",
-          boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
-          display: "flex",
-          alignItems: "center",
-          gap: "10px",
-          justifyContent: "center",
-          width: "20%",
-          boxSizing: "border-box",
-        }}
-        onMouseOver={(e) => (e.currentTarget.style.backgroundColor = "#5a9de9")}
-        onMouseOut={(e) => (e.currentTarget.style.backgroundColor = "#46e243")}
-        onMouseDown={(e) => (e.currentTarget.style.transform = "translateY(0)")}
-        onMouseUp={(e) => (e.currentTarget.style.transform = "translateY(-2px)")}
+        className="w-1/5 flex items-center justify-center gap-2.5 px-5 py-2.5 text-lg font-bold bg-[#46e243] text-black rounded-lg cursor-pointer shadow-md transition-all duration-300 hover:bg-[#5a9de9] active:translate-y-0 hover:-translate-y-0.5"
       >
-        <i
-          className="bi bi-check-all"
-          style={{
-            fontSize: "20px",
-          }}
-        ></i>
+        <i className="bi bi-check-all text-xl"></i>
         {result.status}
       </button>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "column",
-          justifyContent: "center",
-          alignItems: "flex-start",
-          border: "1px solid #ccc",
-          borderRadius: "7px",
-          padding: "16px",
-          marginTop: "20px",
-          marginBottom: "15px",
-          backgroundColor: "#f9f9f9",
-          width: "100%",
-          boxSizing: "border-box",
-        }}
-      >
-        <div
-          style={{
-            fontSize: "20px",
-            fontWeight: "bold",
-            color: "#333",
-          }}
-        >
+
+      <div className={`flex flex-col justify-center items-start w-full mt-5 mb-4 p-4 rounded-lg border ${
+        darkMode ? 'bg-gray-700 border-gray-600' : 'bg-gray-50 border-gray-300'
+      }`}>
+        <div className={`text-xl font-bold ${
+          darkMode ? 'text-gray-200' : 'text-gray-800'
+        }`}>
           pH Level
         </div>
-        <div
-          style={{
-            fontSize: "45px",
-            fontWeight: "bolder",
-            color: "#35be32",
-            marginTop: "16px",
-          }}
-        >
+        <div className="text-[45px] font-extrabold text-[#35be32] mt-4">
           {result.pHLevel}
         </div>
       </div>
-      <div
-        style={{
-          marginBottom: "15px",
-        }}
-      >
-        <p
-          style={{
-            color: "maroon",
-            fontSize: "20px",
-            fontWeight: "700",
-          }}
-        >
+
+      <div className="mb-4">
+        <p className={`text-xl font-bold ${
+          darkMode ? 'text-gray-200' : 'text-maroon'
+        }`}>
           Analysis Confidence: <span>{result.confidence}</span>
         </p>
       </div>

@@ -1,24 +1,63 @@
-# Sample_LWQ
-Sample Lake Water Quality Estimation
+# Lake Water Quality
 
-## Getting Started with Create React App
+    A comprehensive web application for monitoring and analyzing lake water quality metrics.
+    This React-based solution provides real-time monitoring capabilities with an intuitive user interface.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## 🚀 Features
 
-## Available Scripts
+    - Upload satellite images of lakes for analysis.
+    - Predict water quality parameters such as pH level.
+    - Display the analysis results along with confidence percentage.
+    - User-friendly interface for lake name input and image selection.
+    - Dark/Light mode toggle for comfortable viewing in any environment.
 
-In the project directory, you can run:
+## 🛠️ Technologies Used
 
-### `npm start`
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    - React 18
+    - React Dropzone
+    - Bootstrap Icons
+    - React Icons
+    - Google API fonts
+    - Tailwind CSS
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 📋 Prerequisites
 
-### `npm test`
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    - Node.js (version 14 or higher)
+    - npm (comes with Node.js) or yarn
+    - Modern web browser (Chrome, Firefox, Safari, or Edge)
+    - Internet connection for initial setup
 
-### Project Description
-Sample Lake Water Quality estimation project aims to provide an efficient way to analyze water quality parameters from satellite images.
+## ⚙️ Installation
+
+    1. Clone the repository
+    bash
+    git clone https://github.com/srinidhi-2005/Sample_LWQ.git
+
+    2. Navigate to the project directory
+    bash
+    cd lake-water-quality
+
+    3. Install dependencies
+    bash
+    npm install
+
+    4. Start the development server
+    bash
+    npm start
+
+The application will open in your default browser at `http://localhost:3000`
+
+## 🔧 Available Scripts
+
+- `npm start` - Runs the app in development mode
+- `npm test` - Launches the test runner
+- `npm run build` - Builds the app for production
+- `npm run eject` - Ejects from Create React App
+
+## Usage Instructions:
+
+    1. Upload a satellite image of the lake (JPEG, PNG, or JPG formats).
+    2. Enter the name of the lake you want to analyze.
+    3. Click the 'Analyze' button to receive water quality analysis results.
+    4. The results will display the predicted pH level and confidence in the analysis.
+    5. Toggle between dark and light modes using the sun/moon icon in the top-right corner.
